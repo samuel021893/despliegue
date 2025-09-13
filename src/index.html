@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Motorrad - Sheer Riding Pleasure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="bmw-logo">BMW</div>
+                </div>
+                <span>Motorrad</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active" data-section="inicio">Inicio</li>
+                <li class="nav-item" data-section="modelos">Modelos</li>
+                <li class="nav-item" data-section="tecnologia">Tecnología</li>
+                <li class="nav-item" data-section="historia">Historia</li>
+                <li class="nav-item" data-section="contacto">Contacto</li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1>Sheer Riding Pleasure</h1>
+                <p>Descubre la perfecta combinación de innovación, rendimiento y estilo con las motocicletas BMW</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal('welcome')">Explorar Modelos</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('modelos')">Ver Catálogo</button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span>
+                    <span class="stat-label">Años de Innovación</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-label">Modelos Disponibles</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="160">0</span>
+                    <span class="stat-label">Países</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section">
+            <h2>BMW Motorrad</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>BMW Motorrad representa la excelencia en motociclismo desde 1923. Nuestras motocicletas combinan ingeniería alemana de precisión con diseño innovador para ofrecer una experiencia de conducción única.</p>
+                    <p>Desde las deportivas S 1000 RR hasta las aventureras GS, cada BMW está diseñada para superar límites y crear momentos inolvidables en cada kilómetro.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up">
+                        <div class="feature-icon">🏍️</div>
+                        <h3>Rendimiento Superior</h3>
+                        <p>Motores de alta tecnología que ofrecen potencia excepcional y eficiencia</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Ingeniería Alemana</h3>
+                        <p>Precisión y calidad en cada componente, respaldado por décadas de innovación</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Seguridad Avanzada</h3>
+                        <p>Sistemas de asistencia y tecnología de seguridad de última generación</p>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Aventura Sin Límites</h3>
+                        <p>Diseñadas para cualquier terreno y condición climática</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Modelos -->
+        <section id="modelos" class="section hidden">
+            <h2>Nuestros Modelos</h2>
+            <div class="models-filter">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="sport">Sport</button>
+                <button class="filter-btn" data-filter="adventure">Adventure</button>
+                <button class="filter-btn" data-filter="touring">Touring</button>
+                <button class="filter-btn" data-filter="urban">Urban</button>
+            </div>
+            <div class="models-grid">
+                <div class="model-card" data-category="sport">
+                    <div class="model-image">
+                        <div class="model-placeholder">S 1000 RR</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>S 1000 RR</h3>
+                        <p class="model-category">Sport</p>
+                        <p class="model-description">La superbike más potente de BMW con 207 HP</p>
+                        <div class="model-specs">
+                            <span>207 HP</span>
+                            <span>113 Nm</span>
+                            <span>197 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('s1000rr')">Ver Detalles</button>
+                    </div>
+                </div>
+                
+                <div class="model-card" data-category="adventure">
+                    <div class="model-image">
+                        <div class="model-placeholder">R 1250 GS</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>R 1250 GS</h3>
+                        <p class="model-category">Adventure</p>
+                        <p class="model-description">La aventurera legendaria para cualquier terreno</p>
+                        <div class="model-specs">
+                            <span>136 HP</span>
+                            <span>143 Nm</span>
+                            <span>249 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('r1250gs')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="sport">
+                    <div class="model-image">
+                        <div class="model-placeholder">M 1000 RR</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>M 1000 RR</h3>
+                        <p class="model-category">Sport</p>
+                        <p class="model-description">La M más radical para pista y calle</p>
+                        <div class="model-specs">
+                            <span>212 HP</span>
+                            <span>113 Nm</span>
+                            <span>192 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('m1000rr')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="touring">
+                    <div class="model-image">
+                        <div class="model-placeholder">K 1600 GTL</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>K 1600 GTL</h3>
+                        <p class="model-category">Touring</p>
+                        <p class="model-description">Máximo confort para largos viajes</p>
+                        <div class="model-specs">
+                            <span>160 HP</span>
+                            <span>175 Nm</span>
+                            <span>348 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('k1600gtl')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="urban">
+                    <div class="model-image">
+                        <div class="model-placeholder">CE 04</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>CE 04</h3>
+                        <p class="model-category">Urban Mobility</p>
+                        <p class="model-description">Scooter eléctrico del futuro</p>
+                        <div class="model-specs">
+                            <span>42 HP</span>
+                            <span>62 Nm</span>
+                            <span>231 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('ce04')">Ver Detalles</button>
+                    </div>
+                </div>
+
+                <div class="model-card" data-category="adventure">
+                    <div class="model-image">
+                        <div class="model-placeholder">F 850 GS</div>
+                    </div>
+                    <div class="model-info">
+                        <h3>F 850 GS</h3>
+                        <p class="model-category">Adventure</p>
+                        <p class="model-description">Aventura accesible con gran capacidad</p>
+                        <div class="model-specs">
+                            <span>90 HP</span>
+                            <span>92 Nm</span>
+                            <span>229 kg</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="openModal('f850gs')">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tecnología -->
+        <section id="tecnologia" class="section hidden">
+            <h2>Tecnología BMW</h2>
+            <div class="tech-content">
+                <div class="tech-intro">
+                    <p>BMW Motorrad lidera la innovación en tecnología de motocicletas, desarrollando sistemas avanzados que mejoran la seguridad, el rendimiento y la experiencia de conducción.</p>
+                </div>
+                
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">🧠</div>
+                        <h3>ConnectedRide</h3>
+                        <p>Sistema de conectividad que integra tu smartphone con la motocicleta para navegación, música y comunicación.</p>
+                        <ul class="tech-features">
+                            <li>Navegación por voz</li>
+                            <li>Control de música</li>
+                            <li>Llamadas manos libres</li>
+                            <li>Información del vehículo</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">⚡</div>
+                        <h3>ShiftCam Technology</h3>
+                        <p>Tecnología de distribución variable que optimiza el rendimiento y la eficiencia en todo el rango de revoluciones.</p>
+                        <ul class="tech-features">
+                            <li>Mayor potencia a altas RPM</li>
+                            <li>Mejor par a bajas RPM</li>
+                            <li>Reducción de emisiones</li>
+                            <li>Mayor eficiencia</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">🛡️</div>
+                        <h3>Dynamic ESA</h3>
+                        <p>Suspensión electrónica semi-activa que se adapta automáticamente a las condiciones de conducción.</p>
+                        <ul class="tech-features">
+                            <li>Ajuste automático</li>
+                            <li>Múltiples modos</li>
+                            <li>Respuesta en tiempo real</li>
+                            <li>Máximo confort</li>
+                        </ul>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-icon">🎯</div>
+                        <h3>ABS Pro</h3>
+                        <p>Sistema de frenos antibloqueo que funciona incluso en curvas, proporcionando máxima seguridad.</p>
+                        <ul class="tech-features">
+                            <li>Frenado en curva</li>
+                            <li>Sensores de inclinación</li>
+                            <li>Control de estabilidad</li>
+                            <li>Distancia de frenado reducida</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="innovation-timeline">
+                    <h3>Innovaciones BMW Motorrad</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h4>CE 04 Electric Scooter</h4>
+                                <p>Lanzamiento del scooter eléctrico más avanzado</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019</div>
+                            <div class="timeline-content">
+                                <h4>M 1000 RR</h4>
+                                <p>Primera motocicleta de la división M</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2013</div>
+                            <div class="timeline-content">
+                                <h4>ConnectedRide</h4>
+                                <p>Primera integración smartphone en motocicletas</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1988</div>
+                            <div class="timeline-content">
+                                <h4>ABS en Motocicletas</h4>
+                                <p>BMW pionero en sistemas de frenos antibloqueo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Historia -->
+        <section id="historia" class="section hidden">
+            <h2>Historia de BMW Motorrad</h2>
+            <div class="history-content">
+                <div class="history-hero">
+                    <div class="history-image">
+                        <div class="history-placeholder">
+                            <span>1923</span>
+                            <p>BMW R 32</p>
+                        </div>
+                    </div>
+                    <div class="history-text">
+                        <h3>100 Años de Innovación</h3>
+                        <p>En 1923, BMW presentó su primera motocicleta, la R 32, estableciendo los cimientos de lo que se convertiría en una de las marcas más respetadas del mundo motorciclistico.</p>
+                        <p>Con el motor boxer y la transmisión por cardán, BMW definió características que siguen siendo distintivas hasta hoy.</p>
+                    </div>
+                </div>
+
+                <div class="milestones">
+                    <div class="milestone">
+                        <div class="milestone-year">1923</div>
+                        <div class="milestone-content">
+                            <h4>BMW R 32</h4>
+                            <p>La primera motocicleta BMW con motor boxer de 494cc y transmisión por cardán.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-year">1939</div>
+                        <div class="milestone-content">
+                            <h4>BMW R 75</h4>
+                            <p>Motocicleta militar con sidecar y tracción en las tres ruedas.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-year">1973</div>
+                        <div class="milestone-content">
+                            <h4>BMW R 90 S</h4>
+                            <p>Primera motocicleta deportiva de BMW con carenado integral.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-year">1980</div>
+                        <div class="milestone-content">
+                            <h4>BMW R 80 G/S</h4>
+                            <p>Nace la categoría Adventure con la primera GS.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-year">2009</div>
+                        <div class="milestone-content">
+                            <h4>BMW S 1000 RR</h4>
+                            <p>BMW entra al mundo de las superbikes con 193 HP.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone">
+                        <div class="milestone-year">2023</div>
+                        <div class="milestone-content">
+                            <h4>100 Años</h4>
+                            <p>BMW Motorrad celebra un siglo de innovación y pasión por las motocicletas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section hidden">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Encuentra tu Concesionario BMW</h3>
+                    <p>Visita nuestros concesionarios oficiales para conocer de cerca las motocicletas BMW y recibir asesoramiento profesional.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Concesionarios</h4>
+                                <p>Más de 1,200 concesionarios en todo el mundo</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Atención al Cliente</h4>
+                                <p>+1-800-BMW-MOTO (269-6686)</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@bmw-motorrad.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <h4>Web</h4>
+                                <p>www.bmw-motorrad.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Solicita Información</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono">
+                        </div>
+                        <div class="form-group">
+                            <select id="interes" name="interes" required>
+                                <option value="">Modelo de interés</option>
+                                <option value="s1000rr">S 1000 RR</option>
+                                <option value="r1250gs">R 1250 GS</option>
+                                <option value="m1000rr">M 1000 RR</option>
+                                <option value="k1600gtl">K 1600 GTL</option>
+                                <option value="ce04">CE 04</option>
+                                <option value="f850gs">F 850 GS</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje (opcional)" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body">
+                <!-- El contenido se carga dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BMW Motorrad</h3>
+                <p>Sheer Riding Pleasure desde 1923</p>
+                <div class="social-links">
+                    <span class="social-link">📘</span>
+                    <span class="social-link">📷</span>
+                    <span class="social-link">🐦</span>
+                    <span class="social-link">📺</span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Modelos</h4>
+                <ul>
+                    <li>Sport</li>
+                    <li>Adventure</li>
+                    <li>Touring</li>
+                    <li>Urban Mobility</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Servicios</h4>
+                <ul>
+                    <li>Mantenimiento</li>
+                    <li>Repuestos Originales</li>
+                    <li>Financiamiento</li>
+                    <li>Seguros</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Soporte</h4>
+                <ul>
+                    <li>Concesionarios</li>
+                    <li>Atención al Cliente</li>
+                    <li>Manuales</li>
+                    <li>Garantía</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BMW Motorrad. Todos los derechos reservados.</p>
+            <p>Sheer Riding Pleasure 🏍️</p>
+        </div>
+    </footer>
+
+    <!-- Loading Screen -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-content">
+            <div class="bmw-spinner"></div>
+            <p>BMW Motorrad</p>
+            <span>Cargando...</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
